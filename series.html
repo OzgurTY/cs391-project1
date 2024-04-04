@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ozuFlix</title>
+
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <header>
+            <div class="navbar">
+                <button class="navbar-menu-btn">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <a href="index.html" class="navbar-brand">
+                    <img src="./assets/pictures/ozuflixlogo.png" alt="logo">
+                </a>
+
+                <nav>
+                    <ul class="navbar-nav">
+                        <li>
+                            <a href="index.html" class="navbar-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="movies.html" class="navbar-link">Movies</a>
+                        </li>
+                        <li>
+                            <a href="#" class="navbar-link">Series</a>
+                        </li>
+                        <li>
+                            <a href="#category" class="navbar-link">Category</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="navbar-actions">
+                    <form action="#" class="navbar-form">
+                        <input type="text" name="search" placeholder="What are you looking for?" class="navbar-form-search">
+                        
+                        <button class="navbar-form-btn">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </button>
+
+                        <button class="navbar-form-close">
+                            <ion-icon name="close-circle-outline"></ion-icon>
+                        </button>
+                    </form>
+
+                    <button class="navbar-search-btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+
+                    <a href="signin.html" class="navbar-signin">
+                        <span>Sign In</span>
+                        <ion-icon name="log-in-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <div class="filter-bar">
+
+                <div class="filter-drops">
+
+                 <select name="genre" class="genre">
+                     <option value="all genres">All genres</option>
+                     <option value="action">Action</option>
+                     <option value="adventure">Adventure</option>
+                     <option value="documents">Document</option>
+                     <option value="animation">Animation</option>
+                 </select>
+
+                 <select name="genre" class="genre">
+                     <option value="all years">All the years</option>
+                     <option value="2024">2024</option>
+                     <option value="2020-2023">2020-2023</option>
+                     <option value="2010-2019">2010-2019</option>
+                     <option value="2000-2009">2000-2009</option>
+                     <option value="1970-1999">1970-1999</option>
+                 </select>
+
+                </div> 
+
+                <div class="filter-radios">
+                 <input type="radio" name="grade" id="featured" checked>
+                 <label for="featured">Featured</label>
+
+                 <input type="radio" name="grade" id="popular">
+                 <label for="popular">Popular</label>
+
+                 <input type="radio" name="grade" id="newest">
+                 <label for="newest">Newest</label>
+
+                 <div class="checked-radio-bg"></div>
+
+                </div>
+
+             </div>
+
+
+            <section class="category" id="category">
+
+                <h2 class="section-heading">Category</h2>
+
+                <div class="category-grid">
+
+                    <div class="category-card">
+                        <img src="./assets/pictures/category/action.jpg" alt="" class="card-img">
+                        <div class="name">Action</div>
+                        <div class="total">100</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="./assets/pictures/category/sci-fi.jpg" alt="" class="card-img">
+                        <div class="name">Sci-Fi</div>
+                        <div class="total">70</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="./assets/pictures/category/comedy.jpg" alt="" class="card-img">
+                        <div class="name">Comedy</div>
+                        <div class="total">10</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="./assets/pictures/category/horror.jpg" alt="" class="card-img">
+                        <div class="name">Horror</div>
+                        <div class="total">45</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="./assets/pictures/category/adventure.jpg" alt="" class="card-img">
+                        <div class="name">Adventure</div>
+                        <div class="total">80</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="./assets/pictures/category/animation.jpg" alt="" class="card-img">
+                        <div class="name">Animation</div>
+                        <div class="total">65</div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <footer>
+
+                <div class="footer-content">
+
+                    <div class="footer-brand">
+                        <a href="index.html">
+                            <img src="./assets/pictures/ozuflixlogo.png" alt="" class="footer-logo">
+                        </a>
+
+                        <p class="slogan">The best TV series and movie watching platform.</p>
+                        <div class="social-link">
+                            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <ul>
+                            <h4 class="link-heading">ozuFlix</h4>
+                            <li class="link-item"><a href="#about">About</a></li>
+                            <li class="link-item"><a href="#pricing">Pricing</a></li>
+                        </ul>
+
+                        <ul>
+                            <h4 class="link-heading">Browse</h4>
+                            <li class="link-item"><a href="index.html">Home</a></li>
+                            <li class="link-item"><a href="movies.html">Movies</a></li>
+                            <li class="link-item"><a href="#">Series</a></li>
+                            <li class="link-item"><a href="#category">Category</a></li>
+                        </ul>
+
+                        <ul>
+                            <h4 class="link-heading">Help</h4>
+                            <li class="link-item"><a href="accounthelp">Account & Billing</a></li>
+                            <li class="link-item"><a href="planhelp">Plans & Pricing</a></li>
+                            <li class="link-item"><a href="supporteddevices">Supported Devices</a></li>
+                            <li class="link-item"><a href="accessibility">Accessibility</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="footer-copyright">
+
+                    <div class="copyright">
+                        <p>&copy; copyright 2024 ozuFlix</p>
+                    </div>
+
+                    <div class="wrapper">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms and Conditions</a>
+                    </div>
+
+                </div>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    
+
+</body>

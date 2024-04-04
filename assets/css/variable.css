@@ -1,0 +1,31 @@
+
+:root {
+    /*Colors*/
+    --rich-black-fogra-29: hsl(222, 25%, 10%);
+    --rich-black-fogra-30: hsl(219, 32%, 10%);
+    --oxford-blue-50: hsla(218, 39%, 14%, 0.8);
+    --oxford-blue: hsl(218, 39%, 14%);
+    --light-azure: hsl(214, 84%, 56%);
+    --off-white: hsl(0, 0%, 88%);
+    --yellow: hsl(49, 100%, 58%);
+    --white: hsl(0, 0%, 100%);
+    --azure: hsl(211, 100%, 50%);
+
+    /*Font*/
+    --ff-inter: 'Inter', sans-serif;
+
+    /*Spacing*/
+    --sectional-heading: 40px;
+    --fs-lg: 22px;
+    --fs-md: 18px;
+    --fs-sm: 14px;
+    --fs-x-sm: 12px;
+
+    --fw-7: 700;
+    --fw-6: 600;
+    --fw-5: 500;
+
+    --px: 120px;
+
+
+}

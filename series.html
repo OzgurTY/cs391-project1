@@ -19,10 +19,12 @@
     
     <div class="container">
 
-        <header>
+        <header class="">
             <div class="navbar">
                 <button class="navbar-menu-btn">
-                    <span></span><span></span><span></span>
+                    <span class="one"></span>
+                    <span class="two"></span>
+                    <span class="three"></span>
                 </button>
 
                 <a href="index.html" class="navbar-brand">
@@ -73,45 +75,50 @@
 
         <main>
 
-            <div class="filter-bar">
+            <section class="movies">
 
-                <div class="filter-drops">
+                <div class="filter-bar">
 
-                 <select name="genre" class="genre">
-                     <option value="all genres">All genres</option>
-                     <option value="action">Action</option>
-                     <option value="adventure">Adventure</option>
-                     <option value="documents">Document</option>
-                     <option value="animation">Animation</option>
-                 </select>
-
-                 <select name="genre" class="genre">
-                     <option value="all years">All the years</option>
-                     <option value="2024">2024</option>
-                     <option value="2020-2023">2020-2023</option>
-                     <option value="2010-2019">2010-2019</option>
-                     <option value="2000-2009">2000-2009</option>
-                     <option value="1970-1999">1970-1999</option>
-                 </select>
-
-                </div> 
-
-                <div class="filter-radios">
-                 <input type="radio" name="grade" id="featured" checked>
-                 <label for="featured">Featured</label>
-
-                 <input type="radio" name="grade" id="popular">
-                 <label for="popular">Popular</label>
-
-                 <input type="radio" name="grade" id="newest">
-                 <label for="newest">Newest</label>
-
-                 <div class="checked-radio-bg"></div>
-
+                    <div class="filter-drops">
+    
+                     <select name="genre" class="genre">
+                         <option value="all genres">All genres</option>
+                         <option value="action">Action</option>
+                         <option value="adventure">Adventure</option>
+                         <option value="documents">Document</option>
+                         <option value="animation">Animation</option>
+                     </select>
+    
+                     <select name="genre" class="genre">
+                         <option value="all years">All the years</option>
+                         <option value="2024">2024</option>
+                         <option value="2020-2023">2020-2023</option>
+                         <option value="2010-2019">2010-2019</option>
+                         <option value="2000-2009">2000-2009</option>
+                         <option value="1970-1999">1970-1999</option>
+                     </select>
+    
+                    </div> 
+    
+                    <div class="filter-radios">
+                     <input type="radio" name="grade" id="featured" checked>
+                     <label for="featured">Featured</label>
+    
+                     <input type="radio" name="grade" id="popular">
+                     <label for="popular">Popular</label>
+    
+                     <input type="radio" name="grade" id="newest">
+                     <label for="newest">Newest</label>
+    
+                     <div class="checked-radio-bg"></div>
+    
+                    </div>
+    
                 </div>
 
-             </div>
+            </section>
 
+        
 
             <section class="category" id="category">
 
@@ -223,6 +230,9 @@
 
     </div>
 
-    
+    <script src="./assets/js/main.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>

@@ -11,7 +11,7 @@ sign_in_btn.addEventListener("click", () => {
 });
 
 
-/* -------------------------SIGN UP CHECKER---------------------------------------------------*/ 
+/* -------------------------SIGN UP CHECKER---------------------------------------------------*/  //EMİN DEĞİLİM BUNDAN SONRAKİ KISIMDA HATA VAR MI DİYE KONTROL ET
 
 let existingUsers = [
     

@@ -42,6 +42,9 @@ ozuFlix is a web-based platform that provides users with access to an extensive 
 
 ![flowchart](https://github.com/OzgurTY/cs391-project1/assets/104658888/2e762a39-942f-4124-9895-fa6569e7bc2e)
 
+![flowchart2](https://github.com/OzgurTY/cs391-project1/assets/104658888/a6ba6096-68bf-4d12-9bd4-b41f7709e98c)
+
+
 # 4.RESPONSIBILITIES OF EACH PROJECT MEMBER
 
 Ozgur Tuna Yavuz: Managing project overlay, html css js support.

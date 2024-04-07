@@ -128,4 +128,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const authButton = document.getElementById('signIn');
+
+    function updateButton() {
+        
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+        if (isLoggedIn) {
+            
+            authButton.textContent = 'Log Out';
+            authButton.onclick = function() {
+                
+                localStorage.removeItem('isLoggedIn'); 
+                updateButton(); 
+            };
+        } else {
+            
+            authButton.textContent = 'Sign In';
+            authButton.onclick = function() {
+                
+                window.location.href = 'signin.html';
+            };
+        }
+    }
+
+    updateButton(); 
+});
 

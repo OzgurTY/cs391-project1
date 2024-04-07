@@ -133,14 +133,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateButton() {
         
-        const isLoggedIn = localStorage.getItem('isLoggedIn');
+        const isLoggedIn = sessionStorage.getItem('isLoggedIn');
 
         if (isLoggedIn) {
             
             authButton.textContent = 'Log Out';
             authButton.onclick = function() {
                 
-                localStorage.removeItem('isLoggedIn'); 
+                sessionStorage.removeItem('isLoggedIn'); 
                 updateButton(); 
             };
         } else {
@@ -155,5 +155,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateButton(); 
 });
-
 

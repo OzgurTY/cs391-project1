@@ -137,11 +137,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (isLoggedIn) {
             
-            authButton.textContent = 'Log Out';
+            authButton.textContent = 'Welcome '+ sessionStorage.getItem('tempusername') + ' Click To ' + 'Log Out' ;
             authButton.onclick = function() {
                 
                 sessionStorage.removeItem('isLoggedIn'); 
                 updateButton(); 
+                sessionStorage.removeItem('tempusername'); 
             };
         } else {
             
@@ -155,4 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateButton(); 
 });
+
+
 

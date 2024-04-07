@@ -156,11 +156,36 @@ document.addEventListener('DOMContentLoaded', function() {
     updateButton(); 
 });
 
-
+/*
 const container = document.getElementById('movies-grid');
 const items = document.querySelectorAll('[category="movie"]');
 
 items.forEach(item => {
     container.appendChild(item.cloneNode(true));
 });
+*/
 
+function loadContentFromOtherPage() {
+    
+    const otherPageUrl = 'index.html';
+
+    
+    fetch(otherPageUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            // Inject the fetched content into the movies container
+            const moviesContainer = document.getElementById('movies-container');
+            moviesContainer.innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+}
+
+
+window.onload = loadContentFromOtherPage;

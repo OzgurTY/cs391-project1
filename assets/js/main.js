@@ -167,7 +167,7 @@ items.forEach(item => {
 
 function loadContentFromOtherPage() {
     
-    const otherPageUrl = 'index.html';
+    const otherPageUrl = './index.html';
 
     
     fetch(otherPageUrl)

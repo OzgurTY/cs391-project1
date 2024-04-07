@@ -46,7 +46,9 @@ ozuFlix is a web-based platform that provides users with access to an extensive 
 
 # 4.RESPONSIBILITIES OF EACH PROJECT MEMBER
 
-
+Ozgur Tuna Yavuz: Managing project overlay, html css js support.
+Berker Karakus: Javascript coding and html integration.
+Efekan Kavakli: Github repository management, ReadMe creation and html/js adjustments.
 
 
 
@@ -54,7 +56,12 @@ ozuFlix is a web-based platform that provides users with access to an extensive 
 
 # 5.INSTRUCTIONS FOR RUNNING PROJECT
 
+--> Download project.
+--> Unzip the file.
+--> Double click on index.html file to reach main page.
+--> Surf as you wish!
 
-git clone https://github.com/OzgurTY/cs391-project1.git
+You can clone repository with: git clone https://github.com/OzgurTY/cs391-project1.git
+
 
 

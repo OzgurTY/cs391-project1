@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (findUserByUsernameAndPassword(username, password)) {
                 alert('Login successful!');
                 sessionStorage.setItem('isLoggedIn', 'true');
+              sessionStorage.setItem('tempusername', username);
                 window.location.href = "index.html";
                 //to do login word to welcome + username 
                 originalSignInText = document.getElementById("signInText");

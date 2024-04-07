@@ -1,13 +1,19 @@
-const movieData = {
+const movieData = [
 
-    title: "Red Notice",
-    imageSrc: "./assets/pictures/movies/red-notice.jpg",
-    url: "https://www.hdfilmcehennemi.us/red-notice-8/",
-    genre: "Action - Comedy",
-    year: 2021,
-    rating: 8.1
+    {
+        title: "Red Notice",
+        imageSrc: "./assets/pictures/movies/red-notice.jpg",
+        url: "https://www.hdfilmcehennemi.us/red-notice-8/",
+        genre: "Action - Comedy",
+        year: 2021,
+        rating: 8.1
+    }
 
-}
+]
+
+    
+
+
 
 function createCard(data) {
 
@@ -43,6 +49,10 @@ function createCard(data) {
 
 }
 
-const movieContainer = document.getElementById("movie-grid");
-const movieCardElement = createMovieCard(movieData);
-movieContainer.appendChild(movieCardElement);
+const movieContainer = document.getElementById("movies-grid");
+
+
+moviesData.forEach(movieData => {
+    const movieCardElement = createMovieCard(movieData);
+    movieContainer.appendChild(movieCardElement);
+});

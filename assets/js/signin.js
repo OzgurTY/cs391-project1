@@ -11,45 +11,88 @@ sign_in_btn.addEventListener("click", () => {
 });
 
 
-/* -------------------------SIGN UP CHECKER---------------------------------------------------*/  //EMİN DEĞİLİM BUNDAN SONRAKİ KISIMDA HATA VAR MI DİYE KONTROL ET
+document.addEventListener('DOMContentLoaded', function() {
+   
+    const signInForm = document.getElementById('sign-in-form');
+    const signUpForm = document.getElementById('signUpForm');
 
-let existingUsers = [
+   
+    signInForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('usernameIn').value;
+        const password = document.getElementById('passwordIn').value;
+        if (validateSignIn(username, password)) {
+            if (findUserByUsernameAndPassword(username, password)) {
+                alert('Login successful!');
+                sessionStorage.setItem('isLoggedIn', 'true');
+                window.location.href = 'index.html'; 
+            } else {
+                alert('Invalid username or password.'); 
+            }
+        }
+    });
+
+   
+    signUpForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        if (validateSignUp(username, email, password)) {
+            if (findUserByUsername(username)) {
+                alert('Username already exists. Please choose a different one.');
+            } else if (findUserByEmail(email)) {
+                alert('Email already exists. Please use a different email.');
+            } else {
+                saveUser({ username, email, password }); 
+                alert('Registration successful!');
+                window.location.href = 'signin.html'; 
+            }
+        }
+    });
+
     
-];
-
-document.getElementById("signupForm").addEventListener("submit", function(event) {
-    event.preventDefault(); 
-
-    let username = document.getElementById("username").value;
-    let email = document.getElementById("email").value;
+    function saveUser(newUser) {
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        users.push(newUser);
+        localStorage.setItem('users', JSON.stringify(users));
+    }
 
     
-    let userExists = existingUsers.some(user => user.username === username);
-    let emailExists = existingUsers.some(user => user.email === email);
+    function findUserByUsernameAndPassword(username, password) {
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        return users.some(user => user.username === username && user.password === password);
+    }
 
     
-    if (userExists) {
-        showError("Username already exists");
-    } else if (emailExists) {
-        showError("Email already exists");
-    } else {
-        
-        existingUsers.push({ username: username, email: email });
-        
-        let password = document.getElementById("password").value;
+    function findUserByUsername(username) {
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        return users.some(user => user.username === username);
+    }
 
-        
-        document.getElementById("username").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("password").value = "";
+    
+    function findUserByEmail(email) {
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        return users.some(user => user.email === email);
+    }
 
-        
-        console.log("Signup successful");
+   
+    function validateSignIn(username, password) {
+        if (!username || !password) {
+            alert('Please enter both username and password.');
+            return false;
+        }
+        return true;
+    }
+
+   
+    function validateSignUp(username, email, password) {
+        if (!username || !email || !password) {
+            alert('Please fill out all fields.');
+            return false;
+        }
+       
+        return true;
     }
 });
 
-function showError(message) {
-    let errorMessageElement = document.getElementById("error-message");
-    errorMessageElement.textContent = message;
-}
-/*--------------------------------------------------------------------------------------------*/ 

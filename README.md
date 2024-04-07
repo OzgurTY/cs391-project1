@@ -40,15 +40,13 @@ ozuFlix is a web-based platform that provides users with access to an extensive 
 
 # 3. PAGE FLOW DIAGRAM
 
-
+![flowchart](https://github.com/OzgurTY/cs391-project1/assets/104658888/2e762a39-942f-4124-9895-fa6569e7bc2e)
 
 # 4.RESPONSIBILITIES OF EACH PROJECT MEMBER
 
 Ozgur Tuna Yavuz: Managing project overlay, html css js support.
 Berker Karakus: Javascript coding and html integration.
 Efekan Kavakli: Github repository management, ReadMe creation and html/js adjustments.
-
-
 
 
 

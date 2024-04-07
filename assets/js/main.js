@@ -165,27 +165,20 @@ items.forEach(item => {
 });
 */
 
-function loadContentFromOtherPage() {
-    
-    const otherPageUrl = './index.html';
 
-    
-    fetch(otherPageUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(data => {
-            // Inject the fetched content into the movies container
-            const moviesContainer = document.getElementById('movies-container');
-            moviesContainer.innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
+function cloneAndAppendElements() {
+    // Get the container with the elements to clone from index.html
+    const contentToClone = document.getElementById('indexmovie');
+
+    // Get the container to append the cloned elements to in movies.html
+    const moviesContainer = document.getElementById('movies-grid');
+
+    // Clone each specific HTML element and append it to the movies container
+    contentToClone.querySelectorAll('.movie-card').forEach(movie => {
+        const clonedMovie = movie.cloneNode(true);
+        moviesContainer.appendChild(clonedMovie);
+    });
 }
 
-
-window.onload = loadContentFromOtherPage;
+// Call the function to clone and append elements when the page loads
+window.onload = cloneAndAppendElements;

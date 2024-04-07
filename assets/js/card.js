@@ -7,7 +7,17 @@ const movieData = [
         genre: "Action - Comedy",
         year: 2021,
         rating: 8.1
+    },
+
+    {
+        title: "Red Carpet",
+        imageSrc: "./assets/pictures/movies/red-notice.jpg",
+        url: "https://www.hdfilmcehennemi.us/red-notice-8/",
+        genre: "Action - Comedy",
+        year: 2021,
+        rating: 8.1
     }
+
 
 ]
 

@@ -39,9 +39,7 @@ ozuFlix is a web-based platform that provides users with access to an extensive 
 
 
 # 3. PAGE FLOW DIAGRAM
-![alt text](image.png)
 
-![alt text](image-4.png)
 
 
 # 4.RESPONSIBILITIES OF EACH PROJECT MEMBER

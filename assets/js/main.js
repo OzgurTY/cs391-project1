@@ -156,3 +156,11 @@ document.addEventListener('DOMContentLoaded', function() {
     updateButton(); 
 });
 
+
+const container = document.getElementById('movies-grid');
+const items = document.querySelectorAll('[category="movie"]');
+
+items.forEach(item => {
+    container.appendChild(item.cloneNode(true));
+});
+

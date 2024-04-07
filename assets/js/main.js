@@ -162,6 +162,5 @@ const items = document.querySelectorAll('[category="movie"]');
 
 items.forEach(item => {
     container.appendChild(item.cloneNode(true));
-    container.appendChild(clonedItem);
 });
 

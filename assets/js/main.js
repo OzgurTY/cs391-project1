@@ -22,7 +22,7 @@ navbarSearchBtn.addEventListener('click', searchBarIsActive);
 navbarFormCloseBtn.addEventListener('click', searchBarIsActive);
 
 
-function filterMovies() { //filters functions based on the option value of filter bar
+function filterMovies() {
     const selectedGenre = document.getElementById("genre-select").value.toLowerCase();
     const selectedYear = document.getElementById("year-select").value.toLowerCase();
     const movies = document.querySelectorAll('.movie-card');
@@ -48,4 +48,84 @@ function filterMovies() { //filters functions based on the option value of filte
 }
 document.getElementById("genre-select").addEventListener('change', filterMovies);
 document.getElementById("year-select").addEventListener('change', filterMovies);
+
+function TotalFilmsBasedOnCategories() {
+    const movies = document.querySelectorAll('.movie-card');
+    let actionFilms = 0;
+    let comedyFilms = 0;
+    let scifiFilms = 0; 
+    let horrorFilms = 0;
+    let animationFilms = 0;
+    let adventureFilms = 0;
+
+    movies.forEach(movie => {
+        const genreText = movie.querySelector('.genre').textContent.toLowerCase();
+        
+        if (genreText.includes('action')) actionFilms++;
+        if (genreText.includes('comedy')) comedyFilms++;
+        if (genreText.includes('sci-fi')) scifiFilms++; 
+        if (genreText.includes('horror')) horrorFilms++;
+        if (genreText.includes('animation')) animationFilms++;
+        if (genreText.includes('adventure')) adventureFilms++;
+    });
+
+   
+    document.getElementById('animation').querySelector('.total').innerHTML = animationFilms;
+    document.getElementById('adventure').querySelector('.total').innerHTML = adventureFilms;
+    document.getElementById('comedy').querySelector('.total').innerHTML = comedyFilms;
+    document.getElementById('horror').querySelector('.total').innerHTML = horrorFilms;
+    document.getElementById('sci-fi').querySelector('.total').innerHTML = scifiFilms; 
+    document.getElementById('action').querySelector('.total').innerHTML = actionFilms;
+}
+
+document.addEventListener('DOMContentLoaded', TotalFilmsBasedOnCategories);
+
+document.addEventListener('DOMContentLoaded', function() {
     
+    document.querySelector('.navbar-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        filterMovies();
+    });
+
+    
+    document.querySelector('.navbar-form-search').addEventListener('keyup', filterMovies);
+
+    function filterMovies() {
+   
+        var searchQuery = document.querySelector('.navbar-form-search').value.toLowerCase();
+
+       
+        var movies = document.querySelectorAll('.movie-card');
+
+        
+        movies.forEach(function(movie) {
+          
+            var titleText = movie.querySelector('.card-title').textContent.toLowerCase();
+
+           
+            if (titleText.includes(searchQuery)) {
+                movie.style.display = '';
+            } else {
+                movie.style.display = 'none';
+            }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    var playButtons = document.querySelectorAll('.play-button');
+
+   
+    playButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            
+            var movieUrl = this.getAttribute('data-url');
+
+        
+            window.open(movieUrl, '_blank');
+        });
+    });
+});
+
+

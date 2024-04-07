@@ -59,10 +59,3 @@ function createCard(data) {
 
 }
 
-const movieContainer = document.getElementById("movies-grid");
-
-
-moviesData.forEach(movieData => {
-    const movieCardElement = createCard(movieData);
-    movieContainer.appendChild(movieCardElement);
-});

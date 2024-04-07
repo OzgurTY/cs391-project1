@@ -25,7 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (findUserByUsernameAndPassword(username, password)) {
                 alert('Login successful!');
                 sessionStorage.setItem('isLoggedIn', 'true');
-                window.location.href = 'index.html'; 
+                window.location.href = "index.html";
+                //to do login word to welcome + username 
+                originalSignInText = document.getElementById("signInText");
+                originalSignInText.textContent = "Log Out";
             } else {
                 alert('Invalid username or password.'); 
             }
